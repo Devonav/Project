@@ -1,0 +1,97 @@
+#Devon Villalona
+#For the first sprint I will have the user input any number between 1 and 10 for two integers
+# After the User inputs the two integers, then the user has a choice to use the following numeric operators to get the final result.
+
+print('Hello there!', sep = ' ')
+print('Enter your name to to begin!',  end='\n')
+name = input()
+print("Welcome, " + name +'!') #Sting operator that uses the inputed name and combines it with the words within the print statement.
+def add_numbers(num1, num2):
+    print(num1, "+", num2, "=", num1 + num2) #This prints num1 and num 2 with a + sign and = sign. Also adds both intergers
+def subtract_numbers(num1, num2):
+    print(num1, "-", num2, "=", num1 - num2)#This prints num1 and num 2 with a - sign and = sign. Also subtracts both intergers.
+def divide_numbers(num1, num2):
+    print(num1, "/", num2, "=", num1 / num2)#This prints num1 and num 2 with a / sign and = sign. Also divides both intergers.
+def modulus_numbers(num1, num2):
+    print(num1, "%", num2, "=", num1 % num2)#This prints num1 and num 2 with a % sign and = sign. Uses the modulus on both integers.
+def floor_division(num1, num2):
+    print(num1, "//", num2, "=", num1 // num2)#This prints num1 and num 2 with a // sign and = sign. Also uses floor division on both intergers
+def multiply_numbers(num1, num2):
+    print(num1, "*", num2, "=", num1 * num2)#This prints num1 and num 2 with a * sign and = sign. Also multiplys both intergers
+def exponent(num1, num2):
+    print(num1, "**", num2, "=", num1 ** num2)#This prints num1 and num 2 with a ** sign and = sign. Also uses the Exponentiation of both intergers
+
+def main():
+    first_number = int(input("Enter a number between 1 and 10: "))
+    second_number = int(input("Enter another number between 1 and 10: "))
+    operator = input("""Enter a + to add.
+     A - to subtract. A / to divide. 
+     A % to use modulus. A // for floor division. 
+     A * to multiply. 
+     To use exponential calculation use **: """)
+
+    if operator == "+":
+        add_numbers(first_number, second_number)
+
+    elif operator == "-":
+        subtract_numbers(first_number, second_number)
+    elif operator == "/":
+        divide_numbers(first_number, second_number)
+    elif operator == "%":
+        modulus_numbers(first_number, second_number)
+    elif operator == "//":
+        floor_division(first_number, second_number)
+    elif operator == "*":
+        multiply_numbers(first_number, second_number)
+    elif operator == "**":
+        exponent(first_number, second_number)
+
+main()
+print("Now lets make a range counter!")
+print(" ")
+print("Put in your first number!")
+number1 = int(input())
+
+print("Put in your second number!")
+number2 = int(input())
+if number1 >> number2:
+    number1,number2 = number2,number1
+else:
+    number1,number2 = number1, number2
+both_numbers = list(range(number1, number2))
+
+print(" ")
+print("The numbers in between are:")
+print(number1,number2)
+
+
+
+for both_numbers in range(number1,number2):
+    print(both_numbers + 1)
+
+print("Now lets move on to the second part!") #Sprint 2
+year = int(input("Input any year. Example input: 1996: "))
+if (year%4==0) and (year%100!=0):
+    print ('This is a leap year!', year)
+elif (year/400==0):
+    print('This is a leap year!', year)
+else:
+    print('This is a common year!', year)
+current_run = int(input("How many miles do you run now? "))
+running_goal = int(input("What is your running goal? "))
+miles = 1
+while current_run < running_goal:
+    current_run += current_run * 0.1
+    miles += 1
+
+print("If you increase your distance each day by 10%, you can reach your running goal in " + str(miles),"days!")
+gym_set = int(input("How many times do you squat? "))
+gym_set2 = int(input("How many times do you bench? "))
+gym_set3 = int(input("How many times do you deadlift "))
+if gym_set >= 5 and gym_set2 >= 5 or gym_set3:
+    print("Great job and continue to go!")
+else:
+    print("Never too late to go more!")
+
+
+
